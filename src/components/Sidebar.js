@@ -2,7 +2,16 @@ import { Avatar } from '@material-ui/core'
 import React from 'react'
 import './Sidebar.css'
 const profilePic = "https://media-exp1.licdn.com/dms/image/C4D03AQFOFueu7hI9Wg/profile-displayphoto-shrink_200_200/0/1622998714896?e=1635379200&v=beta&t=onOUM0aBluDa5VEyAaYUtgw4IuYkH4etq4CJv1xYhoM"
+
 function Sidebar() {
+
+    const recentItem = (topic) => (
+        <div className="sidebar__recentItem">
+            <div className="sidebar__hash">#</div>
+            <p>{topic}</p>
+        </div>
+    );
+
     return (
         <div className="sidebar">
             <div className="sidebar__top">
@@ -11,19 +20,23 @@ function Sidebar() {
                 <h2>Rohan Padariya</h2>
                 <h4>Software Engineer</h4>
 
-                <div className="sidebar__stats">
-                    <div className="sidebar__stat">
-                        <p>Who viewed your Profie</p>
-                        <p className="sidebar_Number">1,242</p>
-                    </div>
-                    <div className="sidebar__stat">
-                        <p>Views on your post</p>
-                        <p className="sidebar_Number">2,242</p>
-                    </div>
+            </div>
+            <div className="sidebar__stats">
+                <div className="sidebar__stat">
+                    <p>Who viewed your Profie</p>
+                    <p className="sidebar_Number">1,242</p>
+                </div>
+                <div className="sidebar__stat">
+                    <p>Views on your post</p>
+                    <p className="sidebar_Number">2,242</p>
                 </div>
             </div>
             <div className="sidebar__bottom">
-                Recent
+                <p>Recent</p>
+                {recentItem('MLOps')}
+                {recentItem('interviewtips')}
+                {recentItem('Node.js')}
+                {recentItem('nowhiring')}
             </div>
         </div>
     )
