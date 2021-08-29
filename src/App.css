@@ -3,8 +3,13 @@
     flex-direction: column;
     /* align-items: center; */
     background: rgb(243, 242, 239);
+    align-items: center;
 }
 
 .app__body {
     display: flex;
+    margin-left: 20px;
+    margin-right: 20px;
+    width: 1000px;
+    margin-top: 35px;
 }
